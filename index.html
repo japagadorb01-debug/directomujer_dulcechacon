@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBS Hub - IESO Dulce Chacón</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .card { transition: all 0.2s ease-in-out; }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <header class="bg-gradient-to-r border-b-4 border-blue-600 bg-blue-900 text-white py-6 shadow-md text-center">
+        <h1 class="text-2xl font-black tracking-tight px-4 flex justify-center items-center gap-2">
+            🎥 OBS STREAMING HUB
+        </h1>
+        <p class="text-xs text-blue-200 uppercase tracking-widest mt-1 font-semibold">Seminario AdF — IESO Dulce Chacón</p>
+    </header>
+
+    <div class="bg-gray-900 text-white py-3 px-4 text-center font-mono shadow-inner flex justify-center items-center gap-4">
+        <span class="text-xs text-gray-400 uppercase tracking-wider">Tiempo de Sesión:</span>
+        <span id="timer" class="text-xl font-bold text-green-400">105:00</span>
+        <button id="btnTimer" class="bg-blue-700 hover:bg-blue-600 text-white text-xs px-3 py-1 rounded font-sans font-bold transition">Iniciar</button>
+    </div>
+
+    <main class="max-w-md mx-auto p-4 space-y-6 mb-12">
+
+        <section class="bg-white p-5 rounded-2xl shadow card border-l-4 border-blue-600">
+            <h2 class="font-bold text-lg text-blue-900 mb-1 flex items-center gap-2">🚀 Misión: Simulación en Directo</h2>
+            <p class="text-xs text-gray-600 leading-relaxed">
+                ¡Bienvenidos al equipo de producción! Hoy convertiremos la SdA <strong>"Aulas con Memoria"</strong> en un programa de TV real emitido en streaming. Selecciona tu rol, abre tus recursos y sincroniza tu trabajo.
+            </p>
+        </section>
+
+        <section class="space-y-3">
+            <h3 class="font-bold text-gray-500 uppercase text-xs tracking-wider px-1">👥 Organización y Roles</h3>
+            <a href="https://docs.google.com/document/d/1kfUunct3Bc6HXfSYLmeexfQQD5dIzlyzHpnUD-LAzNU/edit?tab=t.cv4cd6juc18m" target="_blank" class="block bg-white p-4 rounded-xl shadow card flex justify-between items-center border border-gray-100">
+                <div class="space-y-0.5">
+                    <h4 class="font-bold text-blue-900 text-sm">Estructura y Reparto de Roles</h4>
+                    <p class="text-xs text-gray-500">Consulta tus funciones en el Control o en el Plató.</p>
+                </div>
+                <span class="text-blue-600 font-bold bg-blue-50 w-8 h-8 rounded-full flex items-center justify-center">→</span>
+            </a>
+        </section>
+
+        <section class="space-y-3">
+            <h3 class="font-bold text-gray-500 uppercase text-xs tracking-wider px-1">🎬 Unidad de Control de Realización</h3>
+           
+            <a href="https://docs.google.com/document/d/1opTtbPPsIYL9StsPpJ_qPMI9ZWah18axwG14WlegfUQ/edit?tab=t.0#heading=h.iuc1kakv980k" target="_blank" class="block bg-white p-4 rounded-xl shadow card flex justify-between items-center border border-gray-100">
+                <div class="space-y-0.5">
+                    <h4 class="font-bold text-gray-800 text-sm">📋 Escaleta de Retransmisión</h4>
+                    <p class="text-xs text-gray-500">Orden de las 8 escenas en OBS y los 11 vídeos de los alumnos.</p>
+                </div>
+                <span class="text-gray-400 font-bold bg-gray-100 w-8 h-8 rounded-full flex items-center justify-center">→</span>
+            </a>
+
+            <a href="https://docs.google.com/document/d/1lsmepSzxJ4TXDGL322AliB8RrQfdmkETfUxkapjESrI/edit?tab=t.0#heading=h.unppu3fgfnfg" target="_blank" class="block bg-white p-4 rounded-xl shadow card flex justify-between items-center border border-gray-100">
+                <div class="space-y-0.5">
+                    <h4 class="font-bold text-pink-700 text-sm">🎨 Guía de Diseño Gráfico (Canva)</h4>
+                    <p class="text-xs text-gray-500">Instrucciones para personalizar faldones, moscas y rótulos.</p>
+                </div>
+                <span class="text-pink-600 font-bold bg-pink-50 w-8 h-8 rounded-full flex items-center justify-center">→</span>
+            </a>
+
+            <a href="https://drive.google.com/drive/folders/1p3fxcIpVjxpas8MJcVN3070YX3UJQ1k3?usp=drive_link" target="_blank" class="block bg-white p-4 rounded-xl shadow card flex justify-between items-center border border-gray-100">
+                <div class="space-y-0.5">
+                    <h4 class="font-bold text-yellow-700 text-sm">📂 Servidor de Recursos Multimedia</h4>
+                    <p class="text-xs text-gray-500">Acceso directo a sintonías, vídeos, moscas y fondos croma.</p>
+                </div>
+                <span class="text-yellow-600 font-bold bg-yellow-50 w-8 h-8 rounded-full flex items-center justify-center">→</span>
+            </a>
+        </section>
+
+        <section class="space-y-3">
+            <h3 class="font-bold text-gray-500 uppercase text-xs tracking-wider px-1">🎙️ Unidad de Plató y Cámaras</h3>
+            <a href="https://docs.google.com/document/d/1UdvkmFWbzu5jwv1D9w0iSpZqyBH6rE_DgI5uqkq65lw/edit?tab=t.im12pn3r8opj#heading=h.r1om4d3r7y28" target="_blank" class="block bg-white p-4 rounded-xl shadow card flex justify-between items-center border border-gray-100">
+                <div class="space-y-0.5">
+                    <h4 class="font-bold text-green-700 text-sm">📜 Guion de Plató y Reportero</h4>
+                    <p class="text-xs text-gray-500">Diálogos listos para leer desde el móvil (Presentadores/Reporteros).</p>
+                </div>
+                <span class="text-green-600 font-bold bg-green-50 w-8 h-8 rounded-full flex items-center justify-center">→</span>
+            </a>
+        </section>
+
+        <section class="space-y-3">
+            <h3 class="font-bold text-gray-500 uppercase text-xs tracking-wider px-1">📊 Evaluación AdF</h3>
+            <a href="https://docs.google.com/document/d/1pMymh1vhk3tixcWvbOjJX1B6GLg2cDC2yCs3J6MpOqg/edit?tab=t.cv4cd6juc18m" target="_blank" class="block bg-white p-4 rounded-xl shadow card flex justify-between items-center border border-gray-100">
+                <div class="space-y-0.5">
+                    <h4 class="font-bold text-purple-700 text-sm">📋 Banco de Rúbricas para el Aula</h4>
+                    <p class="text-xs text-gray-500">Criterios de evaluación (OBS, guion, equipo) transferibles al alumnado.</p>
+                </div>
+                <span class="text-purple-600 font-bold bg-purple-50 w-8 h-8 rounded-full flex items-center justify-center">→</span>
+            </a>
+        </section>
+
+        <section class="bg-gray-100 p-4 rounded-xl border border-gray-200">
+            <h3 class="font-bold text-xs text-gray-700 uppercase tracking-wider mb-2">💡 Tips Rápidos de Conexión</h3>
+            <ul class="text-xs text-gray-600 space-y-1.5 list-disc pl-4">
+                <li><strong>Cámaras Móviles:</strong> Asegúrate de estar conectado al Wi-Fi del instituto antes de enlazar tu smartphone.</li>
+                <li><strong>Sonido en OBS:</strong> Recuerda mutear los micrófonos del plató cuando el realizador lance los vídeos archivados.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="text-center text-xs text-gray-400 py-6 border-t border-gray-200 bg-white">
+        IESO Dulce Chacón • Ecosistema Aula del Futuro
+    </footer>
+
+    <script>
+        let duration = 105 * 60;
+        let timerDisplay = document.getElementById('timer');
+        let btn = document.getElementById('btnTimer');
+        let interval = null;
+
+        btn.addEventListener('click', function() {
+            if (interval) {
+                clearInterval(interval);
+                interval = null;
+                btn.innerText = "Reanudar";
+                btn.className = "bg-green-600 hover:bg-green-500 text-white text-xs px-3 py-1 rounded font-sans font-bold transition";
+            } else {
+                btn.innerText = "Pausar";
+                btn.className = "bg-red-600 hover:bg-red-500 text-white text-xs px-3 py-1 rounded font-sans font-bold transition";
+                interval = setInterval(function() {
+                    let minutes = Math.floor(duration / 60);
+                    let seconds = duration % 60;
+                    minutes = minutes < 10 ? "0" + minutes : minutes;
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+                    timerDisplay.innerText = minutes + ":" + seconds;
+                    if (--duration < 0) {
+                        clearInterval(interval);
+                        timerDisplay.innerText = "00:00";
+                        timerDisplay.className = "text-xl font-bold text-red-500 animate-pulse";
+                    }
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>
